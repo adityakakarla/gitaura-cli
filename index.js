@@ -210,7 +210,7 @@ async function createBackdatedCommits() {
     {
       type: 'input',
       name: 'startDate',
-      message: 'Enter the start date (YYYY-MM-DD):',
+      message: 'Enter the start date for your commits (YYYY-MM-DD):',
       validate: input => {
         if (!dateFormat.test(input) || isNaN(new Date(input).getTime())) {
           return 'Please enter a valid date in YYYY-MM-DD format';
@@ -221,7 +221,7 @@ async function createBackdatedCommits() {
     {
       type: 'input',
       name: 'endDate',
-      message: 'Enter the end date (YYYY-MM-DD):',
+      message: 'Enter the end date for your commits (YYYY-MM-DD):',
       validate: input => {
         if (!dateFormat.test(input) || isNaN(new Date(input).getTime())) {
           return 'Please enter a valid date in YYYY-MM-DD format';
@@ -279,7 +279,7 @@ async function createBackdatedCommits() {
   
   if (shouldPush.push) {
     console.log('Pushing commits to GitHub...');
-    execSync('git push -u origin HEAD --force', { stdio: 'inherit' });
+    execSync('git push -u origin HEAD', { stdio: 'inherit' });
     console.log('Commits pushed successfully!');
   }
 }
