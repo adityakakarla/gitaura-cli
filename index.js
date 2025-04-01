@@ -287,7 +287,7 @@ async function createBackdatedCommits() {
 async function main() {
   try {
     const homeDir = os.homedir();
-    const defaultDir = path.join(homeDir, 'gitgenie');
+    const defaultDir = path.join(homeDir, 'gitaura');
 
     const dirAnswer = await inquirer.prompt([
       {
