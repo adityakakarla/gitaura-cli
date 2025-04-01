@@ -2,12 +2,6 @@
 
 A command-line tool that helps you create backdated git commits and populate your GitHub contribution graph.
 
-## Installation
-
-```bash
-npm install -g gitgenie
-```
-
 ## Features
 
 - Create a new GitHub repository or use an existing one
